@@ -32,15 +32,12 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
-                <meta property="og:image" content={post.coverImage.url} />
+                {/* <meta property="og:image" content={post.coverImage.url} /> */}
               </Head>
               <PostHeader
                 title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
               />
-              <PostBody content={post.content} />
+              <PostBody content={post.text} />
             </article>
             <SectionSeparator />
             {morePosts && morePosts.length > 0 && (
